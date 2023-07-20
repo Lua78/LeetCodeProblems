@@ -1,0 +1,13 @@
+class Solution(object):
+    def distanceK(self, root, target, k):
+        res = []
+        pairs = {}
+        def bfs(root,parent):
+            if root == None:
+                return
+            pairs[root.val] = parent
+            bfs(root.rigth,root)
+            bfs(root.left,root)
+        print(pairs)
+        return res
+                        
